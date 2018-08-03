@@ -28,23 +28,23 @@ def newRestaurant():
 
 @app.route('/restaurants/<int:restaurant_id>/edit')
 def editRestaurant():
-	pass
+	return "This page will allow you to edit a restaurant"
 
 @app.route('/restaurants/<int:restaurant_id>/delete')
-def deleteRestaurant():
-	pass
+def deleteRestaurant(restaurant_id):
+	return "This page will allow you to  delete restaurant %s" % restaurant_id
 
 @app.route('/restaurants/<int:restaurant_id>/menu/<int:menu_id>/edit')
-def editMenuItem():
-	pass
+def editMenuItem(restaurant_id, menu_id):
+	return "This page will allow you to edit menu item %s of restaurant %s " % (menu_id, restaurant_id)
 
 @app.route('/restaurants/<int:restaurant_id>/menu/<int:menu_id>/delete')
-def deleteMenuItem():
-	pass
+def deleteMenuItem(restaurant_id, menu_id):
+	return "This page will allow you to delete menu item %s of restaurant %s " % (menu_id, restaurant_id)
 
 @app.route('/restaurants/<int:restaurant_id>/menu/new')
-def newMenuItem():
-	pass
+def newMenuItem(restaurant_id):
+	return "This will allow you to add a new menu item to restaurant %s" % restaurant_id
 
 
 if __name__ == '__main__':
