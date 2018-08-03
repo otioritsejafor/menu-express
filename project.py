@@ -19,12 +19,13 @@ def restaurantList():
 
 @app.route('/restaurants/<int:restaurant_id>/')
 @app.route('/restaurants/<int:restaurant_id>/menu')
-def restaurantMenu():
-	pass
+def restaurantMenu(restaurant_id):
+	return "This page will show restaurant menus"
 
 @app.route('/restaurants/new')
 def newRestaurant():
-	pass
+	return "This page will allow you to add a new restaurant"
+
 @app.route('/restaurants/<int:restaurant_id>/edit')
 def editRestaurant():
 	pass
