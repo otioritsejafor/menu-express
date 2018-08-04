@@ -1,0 +1,88 @@
+<html>
+
+<body>
+
+<h1>{{restaurant.name}} </h1>
+
+{% if items!= [] %}
+
+
+<h2> Appetizers </h2>
+
+
+{% for item in items %}
+
+ {% if item.course=='Appetizer' %}
+ <h3> {{item.name}} </h3>
+ <p> {{item.price}} </p>
+ <p> {{item.description}} </p>
+
+ <p><a href="/restaurants/{{restaurant.id}}/menu/{{item.id}}/edit"> Edit </a></p>
+
+ <p><a href="/restaurants/{{restaurant.id}}/menu/{{item.id}}/delete"> Delete  </a></p>
+
+ {% endif %}
+
+{% endfor %}
+
+<h2> Entrees </h2>
+
+{% for item in items %}
+
+ {% if item.course=='Entree' %}
+ <h3> {{item.name}} </h3>
+ <p> {{item.price}} </p>
+ <p> {{item.description}} </p>
+
+ <p><a href="/restaurants/{{restaurant.id}}/menu/{{item.id}}/edit"> Edit </a></p>
+
+ <p><a href="/restaurants/{{restaurant.id}}/menu/{{item.id}}/delete"> Delete  </a></p>
+ {% endif %}
+
+{% endfor %}
+
+<h2> Desserts </h2>
+
+{% for item in items %}
+
+ {% if item.course=='Dessert' %}
+ <h3> {{item.name}} </h3>
+ <p> {{item.price}} </p>
+ <p> {{item.description}} </p>
+
+ <p><a href="/restaurants/{{restaurant.id}}/menu/{{item.id}}/edit"> Edit </a></p>
+
+ <p><a href="/restaurants/{{restaurant.id}}/menu/{{item.id}}/delete"> Delete  </a></p>
+
+ {% endif %}
+
+{% endfor %}
+
+<h2> Beverages </h2>
+
+{% for item in items %}
+
+ {% if item.course=='Beverage' %}
+
+ <h3> {{item.name}} </h3>
+ <p> {{item.price}} </p>
+ <p> {{item.description}} </p>
+
+ <p><a href="/restaurants/{{restaurant.id}}/menu/{{item.id}}/edit"> Edit </a></p>
+
+ <p><a href="/restaurants/{{restaurant.id}}/menu/{{item.id}}/delete"> Delete  </a></p>
+
+ {% endif %}
+
+{% endfor %}
+
+{% else %}
+
+<h3>You currently have no menu items</h3>
+
+{% endif %}
+
+
+</body>
+
+</html>

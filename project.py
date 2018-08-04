@@ -31,31 +31,33 @@ def restaurantList():
 @app.route('/restaurants/<int:restaurant_id>/')
 @app.route('/restaurants/<int:restaurant_id>/menu')
 def restaurantMenu(restaurant_id):
-	return "This page will show restaurant menus"
+	return render_template('menu.html', restaurant=restaurant, items=items)
+
 
 @app.route('/restaurants/new')
 def newRestaurant():
-	return "This page will allow you to add a new restaurant"
+	return render_template('newRestaurant.html')
+
 
 @app.route('/restaurants/<int:restaurant_id>/edit')
-def editRestaurant():
-	return "This page will allow you to edit a restaurant"
+def editRestaurant(restaurant_id):
+	return render_template('editRestaurant.html', restaurant=restaurant)
 
 @app.route('/restaurants/<int:restaurant_id>/delete')
 def deleteRestaurant(restaurant_id):
-	return "This page will allow you to  delete restaurant %s" % restaurant_id
+	return render_template('deleteRestaurant.html', restaurant=restaurant)
 
 @app.route('/restaurants/<int:restaurant_id>/menu/<int:menu_id>/edit')
 def editMenuItem(restaurant_id, menu_id):
-	return "This page will allow you to edit menu item %s of restaurant %s " % (menu_id, restaurant_id)
+	return render_template('editMenuItem.html', restaurant_id=restaurant_id, menu_id=menu_id, item=item)
 
 @app.route('/restaurants/<int:restaurant_id>/menu/<int:menu_id>/delete')
 def deleteMenuItem(restaurant_id, menu_id):
-	return "This page will allow you to delete menu item %s of restaurant %s " % (menu_id, restaurant_id)
+	return render_template("deleteMenuItem.html", item=item)
 
 @app.route('/restaurants/<int:restaurant_id>/menu/new')
 def newMenuItem(restaurant_id):
-	return "This will allow you to add a new menu item to restaurant %s" % restaurant_id
+	return render_template('newMenuItem.html', restaurant=restaurant)
 
 
 if __name__ == '__main__':
