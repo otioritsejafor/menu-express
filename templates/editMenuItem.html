@@ -2,13 +2,17 @@
 
 <h1> Edit Menu Item </h1>
 
-<form action="#" method="post">
+<form action="{{url_for('editMenuItem', restaurant_id=restaurant_id, menu_id=menu_id)}}" method="post">
 <body>
   <p>Name:</p>
-  <input type='text' size='30' name='name' placeholder="{{item.name}}">
-  <p> Price: </p>
-  <input type='text' size='30' name='price' placeholder="{{item.price}}">
-  <input type='submit' value='Edit'>
+  <input type='text' size='30' name='name' placeholder="{{editedItem.name}}">
+  <p> Description: </p>
+  <input type='text' size='30' name='description'>
+  <p> Course: </p>
+  <input type='text' size='30' name='course' placeholder="{{editedItem.course}}"
+  <p> Price </p>
+  <input type='text' size='30' name='price' placeholder="{{editedItem.price}}"
+</br></br><input type='submit' value='Edit'>
 
 </body>
 </form>
