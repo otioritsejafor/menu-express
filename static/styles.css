@@ -1,14 +1,57 @@
-body            { font-family: sans-serif; background-color: #333333; background-image: url('https://cloud.githubusercontent.com/assets/9041401/6119508/7cbced14-b07e-11e4-9dbd-f01488203879.jpg')}
+@import url(//fonts.googleapis.com/css?family=Fredoka+One);
 
- h1, h2, h3, h4       { color: #CCCCCC; }
+@font-face {
+    font-family: 'klinicMedium';
+    src: url('fonts/KlinicSlabMedium.otf');
+}
 
-h1, h2          { font-family: 'Georgia', serif; margin: 0; }
+@font-face {
+    font-family: 'klinicBold';
+    src: url('fonts/KlinicSlabBold.otf');
+}
+
+@font-face {
+  font-family: 'klinicLight';
+  src: url("fonts/KlinicSlabLight.otf");
+}
+
+@font-face {
+  font-family: 'langdon';
+  src: url("fonts/Langdon_2.otf");
+}
+
+
+body            {
+  font-family: 'klinicLight';
+  background-color: #fdcb6e;
+}
+
+ h1 {
+   font-family: 'langdon';
+   color: #553C26;
+   font-size: 4em;
+ }
+
+h2 {
+  font-family: 'klinicBold', sans-serif;
+  color: #553C26;
+  font-size: 2em
+
+}
+
+h3, h4
+   {
+   font-family: 'klinicMedium', sans-serif;
+   color: #553C26; }
+
+h1, h2          { serif; margin: 0; }
 
 h1              { border-bottom: 2px solid #eee; }
 
-h2              { font-size: 1.2em; }
 
-p               { color: #CCCCCC;}
+p {
+  color: #825a2c;
+}
 
 a {text-decoration: none; color:#FFFFCC; font-size: .75em;}
 
