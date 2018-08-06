@@ -6,11 +6,11 @@
 
 {% for restaurant in restaurants %}
 
-<h1>{{restaurant.name}}</h1>
+<a href="/restaurants/{{restaurant.id}}/"><h1>{{restaurant.name}}</h1></a>
 
 <div>
 
-<p><a href=""> Edit Restaurant </a></p>
+<p><a href="/restaurants/{{restaurant.id}}/edit"> Edit Restaurant </a></p>
 
 <p><a href="/restaurants/{{restaurant.id}}/delete"> Delete Restaurant </a></p>
 

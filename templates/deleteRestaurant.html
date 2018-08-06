@@ -2,11 +2,15 @@
 
 <body>
 
-<h1> Are you sure you want to delete {{restaurant.name}}? </h1>
+<h1> Are you sure you want to delete {{restaurant.name}}?
+  
+<a href="{{url_for('restaurantList')}}"> Cancel </a>
+</h1>
 
-<form action="#" method="post">
+<form action="/restaurants/{{restaurant.id}}/delete" method="post">
 
 <input type="submit" value="Delete"></input>
+
 
 </form>
 
