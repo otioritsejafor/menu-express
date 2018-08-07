@@ -1,10 +1,14 @@
 <html>
+<head>
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
 
 <body>
 
 <h1> Are you sure you want to delete {{restaurant.name}}?
-  
-<a href="{{url_for('restaurantList')}}"> Cancel </a>
+
+<a href="{{url_for('restaurantList')}}"><br> Cancel </a>
 </h1>
 
 <form action="/restaurants/{{restaurant.id}}/delete" method="post">

@@ -1,12 +1,16 @@
 <html>
 
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+
+
 <body>
 
-<h1> Restaurant List </h1>
+<h1 class="intro"> Restaurant List </h1>
+<br><br>
 
 {% for restaurant in restaurants %}
 
-<a href="/restaurants/{{restaurant.id}}/"><h1>{{restaurant.name}}</h1></a>
+<a href="/restaurants/{{restaurant.id}}/"><h1 class="main">{{restaurant.name}}</h1></a>
 
 <div>
 
