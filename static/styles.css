@@ -1,5 +1,5 @@
 @import url(//fonts.googleapis.com/css?family=Fredoka+One);
-
+@import url(//fonts.googleapis.com/css?family=Cinzel);
 @font-face {
     font-family: 'klinicMedium';
     src: url('fonts/KlinicSlabMedium.otf');
@@ -24,12 +24,20 @@
 body            {
   font-family: 'klinicLight';
   background-color: #fdcb6e;
+
+}
+
+body.menu {
+  background-image: url('delicious.jpg');
+   /*background-size: 1024px 900px; */
+   background-size: 1240px 1000px;
 }
 
  h1 {
    font-family: 'langdon';
    color: #553C26;
    font-size: 4em;
+   text-align: center;
  }
 
 h2 {
@@ -42,7 +50,8 @@ h2 {
 h3, h4
    {
    font-family: 'klinicMedium', sans-serif;
-   color: #553C26; }
+   color: #553C26;
+   font-size: 1.3em}
 
 h1, h2          { serif; margin: 0; }
 
@@ -51,9 +60,15 @@ h1              { border-bottom: 2px solid #eee; }
 
 p {
   color: #825a2c;
+  font-size: 1.2em;
 }
 
-a {text-decoration: none; color:#FFFFCC; font-size: .75em;}
+a {
+  text-decoration: none;
+  color: black;
+  font-family: 'Cinzel';
+  font-size: 1em;
+}
 
 .pane {position:absolute; left: 25%; border: 2px solid;
     border-radius: 25px; padding: 5px; margin: 5px; border-color: #999999; background-color: #333333; }
@@ -69,3 +84,55 @@ a {text-decoration: none; color:#FFFFCC; font-size: .75em;}
 .editdeletepane{}
 
 .flash          { background: #cee5F5; }
+
+.pane {
+    width: 600px;
+    position: absolute;
+    left: 25%;
+    border: 2px solid;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    border-color: #999999;
+    background-color: #F2F1EF
+}
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #FDE3A7;
+  border: none;
+  color: #825a2c;
+  text-align: center;
+  font-size: 14px;
+  padding: 5px;
+  width: 235px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
